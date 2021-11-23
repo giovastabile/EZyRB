@@ -39,7 +39,8 @@ class AE(ANN, Reduction):
         >>> optim = torch.optim.Adam
         >>> ae = AE([400, low_dim], [low_dim, 400], f(), f(), 2000)
         >>> # or ...
-        >>> ae = AE([400, 10, 10, low_dim], [low_dim, 400], f(), f(), 1e-5, optimizer = optim)
+        >>> ae = AE([400, 10, 10, low_dim], [low_dim, 400], f(), f(), 1e-5,
+        >>> optimizer = optim)
         >>> ae.fit(snapshots)
         >>> reduced_snapshots = ae.reduce(snapshots)
         >>> expanded_snapshots = ae.expand(reduced_snapshots)
